@@ -1,0 +1,109 @@
+#include <iostream>
+
+using namespace std;
+
+int calculadora ();
+
+float suma (float n1, float n2);
+float resta (float n1, float n2);
+float multiplicacion (float n1, float n2);
+float division (float n1, float n2);
+float modulo (float n1, float n2);
+
+int main()
+{
+	
+	calculadora ();
+	getchar ();
+	return 0;
+	
+}
+
+int calculadora ()
+{
+	float var1, var2, resultado;
+	char opcion;
+	
+	cout <<"Ingrese el primer valor\t";
+	cin >> var1;
+	
+	cout <<"Ingrese el segundo valor\t";
+	cin >> var2;
+	
+	cout << "Operacion a realizar:" << endl;
+	
+	cout << "a) Suma" << endl;
+	cout << "b) Resta" << endl;
+	cout << "c) Multiplicacion " << endl;
+	cout << "d) Division " << endl;
+	cout << "e) Modulo" << endl;
+	cin >> opcion;
+	
+	switch (opcion)
+	{
+		case 'a': 
+		case 'A':  resultado = suma (var1, var2);
+	               cout << "El resultado de la suma es \t" << resultado << endl;
+	               break;
+	              
+	    case 'b':
+		case 'B':  resultado = resta (var1, var2);
+		           cout << "El resultado de la resta es\t" << resultado << endl;
+		           break;
+		
+		case 'c':
+		case 'C':  resultado = multiplicacion (var1, var2);
+		           cout << "El resultado de la multiplicacion es\t" << resultado << endl;
+		           break;
+				  
+		case 'd':
+		case 'D':  resultado = division (var1, var2);
+		           cout << "El resultado de la division es\t" << resultado << endl;
+		           break;
+				  
+		case 'e': 
+		case 'E':  resultado = modulo (var1, var2);
+		           cout << "El resultado del modulo es\t" << resultado << endl;
+		           break;
+		          
+		default : cout << "Opcion no valida" << endl;
+	}
+	
+		
+	return 0;
+}	
+
+float suma (float n1, float n2)
+{
+	float s;
+	s= n1 + n2;
+	return s;
+}
+
+float resta (float n1, float n2)
+{
+	float r;
+	r= n1 - n2;
+	return r;
+}
+
+float multiplicacion (float n1, float n2)
+{
+	float m;
+	m= n1 * n2;
+	return m;
+}
+
+float division (float n1, float n2)
+{
+	float d;
+	d= n1 / n2;
+	return d;
+}
+
+float modulo (float n1, float n2)
+{
+	float o;
+	o= (int) n1 % (int) n2;
+	return o;
+}
